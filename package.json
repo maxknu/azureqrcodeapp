@@ -1,0 +1,14 @@
+{
+    "name": "azureqrcodeapp",
+    "description": "QR code generator based on qr-image library and Azure App Service. No other dependencies.",
+    "version": "0.0.1",
+    "private": true,
+    "license": "MIT",
+    "author": "Max Knutsson",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "qr-image": "^3.2.0"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/19fbb581-23df-4687-9c2a-6af79bc6eb0b/resourceGroups/Work/providers/Microsoft.Web/sites/qrcodeapp20",
+    "appService.deploySubpath": ""
+}
