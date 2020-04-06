@@ -2,8 +2,19 @@
 
 This sample demonstrates how to create a QR Code image generator which returns a PNG image using node js. Using nodes basic app and qr-image NPM library.
 
-## DEMO
+## DEMO & HOW TO USE
 https://qrcodeapp20.azurewebsites.net/?size=5&text=www.bing.com&token=jkasjhdasgj764ghjdfg7964hjdv78  
+
+```bash
+# 1. Now inside the Demo link above, midify text=www.bing.com to something else like text=https://news.ycombinator.com/
+https://qrcodeapp20.azurewebsites.net/?size=5&text=https://news.ycombinator.com/&token=jkasjhdasgj764ghjdfg7964hjdv78  
+
+# 2. Scan QR code with your phone
+Scan QR Code
+
+# 3. Modify size=5 to a number between 1 and 20
+Size=10
+```
 
 ## Requirements
 - Node JS v10+ nodejs.org with NPM dependency manager or Yarn
