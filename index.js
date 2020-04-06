@@ -1,22 +1,31 @@
 const http = require('http');
-var qr = require('qr-image');
-var url = require('url');
+const url = require('url');
+const qr = require('qr-image');
+require('dotenv').config()
 
 const server = http.createServer((request, response) => {
     let imgSize = 5;
-    let imgURLName = new Date().toString()
+    let imgURLName = new Date().toString();
+    let SECRET_TOKEN = process.env.SECRET_TOKEN;
+    let providedToken = "";
 
     try {
         imgURLName = url.parse(request.url, true).query.text;
         imgSize = parseInt(url.parse(request.url, true).query.size);
+        providedToken = url.parse(request.url, true).query.token;
 
-        let code = qr.image(imgURLName, { type: 'png', size: imgSize });
+        if (providedToken == SECRET_TOKEN) {
+            let code = qr.image(imgURLName, { type: 'png', size: imgSize });
+            response.writeHead(200, { "Content-Type": "image/png" });
+            code.pipe(response);
+        } else {
+            response.writeHead(200, { "Content-Type": "text/plain" });
+            response.end('Access denied, incorrect token. Example: try provide ?token= ?text=, ?size= query strings. Like this: http://localhost:1337/?size=6&text=www.bing.com&token=yoursupersecrettokencodefromenv');
+        }
 
-        response.writeHead(200, { "Content-Type": "image/png" });
-        code.pipe(response);
     } catch (error) {
         response.writeHead(200, { 'Content-Type': 'text/plain' });
-        response.end('Try adding ?text and ?size tags. Like this: http://localhost:1337/?size=6&text=bing.com');
+        response.end('You will need to provide ?token= ?text=, ?size= query strings. Like this: http://localhost:1337/?size=6&text=www.bing.com&token=yoursupersecrettokencodefromenv');
     }
 });
 
