@@ -18,7 +18,7 @@ cd azureqrcodeapp
 # 3. Install dependencies. 
 npm install
 
-# 4. Create `.env` file inside the root folder with `SECRET_TOKEN`, this can be any string and number combination
+# 4. Create .env file inside the root folder with SECRET_TOKEN, can be any string and number
 SECRET_TOKEN=yoursupersecrettokencodefromenv
 
 # 5. Run npm command to start
@@ -30,8 +30,6 @@ http://localhost:3000
 # 6. Try generating a code , navigate to
 http://localhost:1337/?size=6&text=www.bing.com&token=yoursupersecrettokencodefromenv
 ```
-
-
 
 ## For deployment on Azure free App Service
 Use tutorial from docs.microsoft to deploy to Azure App Service
