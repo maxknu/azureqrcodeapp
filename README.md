@@ -6,8 +6,8 @@ This sample demonstrates how to create a QR Code image generator which returns a
 https://qrcodeapp20.azurewebsites.net/?size=5&text=www.bing.com&token=jkasjhdasgj764ghjdfg7964hjdv78  
 
 ```bash
-# 1. Now inside the URL, modify text=www.bing.com to something else like text=https://news.ycombinator.com/
-https://qrcodeapp20.azurewebsites.net/?size=5&text=https://news.ycombinator.com/&token=jkasjhdasgj764ghjdfg7964hjdv78  
+# 1. Now inside the URL, modify text=www.bing.com to something else like text=news.ycombinator.com/
+https://qrcodeapp20.azurewebsites.net/?size=5&text=news.ycombinator.com/&token=jkasjhdasgj764ghjdfg7964hjdv78  
 
 # 2. Scan QR code with your phone
 Scan QR Code
