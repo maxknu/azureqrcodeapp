@@ -20,7 +20,7 @@ const server = http.createServer((request, response) => {
             code.pipe(response);
         } else {
             response.writeHead(200, { "Content-Type": "text/plain" });
-            response.end('Access denied incorrect token: Try proving query strings like this "?token=" "?text=" "?size=" EXAMPLE: https://qrcodeapp20.azurewebsites.net/?size=6&text=www.bing.com&token=yoursupersecrettokencodefromenv');
+            response.end('Access denied. Incorrect token: Try proving query strings like this "?token=" "?text=" "?size=" EXAMPLE: https://qrcodeapp20.azurewebsites.net/?size=6&text=www.bing.com&token=yoursupersecrettokencodefromenv');
         }
 
     } catch (error) {
